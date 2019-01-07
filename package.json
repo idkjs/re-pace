@@ -21,10 +21,6 @@
   ],
   "author": "",
   "license": "MIT",
-  "peerDependencies": {
-    "@pace/core": "*",
-    "@pace/ui": "*"
-  },
   "dependencies": {
     "bs-css": "^8.0.0",
     "react": "^16.2.0",

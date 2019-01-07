@@ -1,5 +1,5 @@
-bs_package_flags = -bs-package-name @pace/core
-src_root_dir = /home/tomis/Documents/Git/re-pace/node_modules/@pace/core
+bs_package_flags = -bs-package-map @pace/core
+src_root_dir = /home/tomis/Documents/Git/re-pace/packages/core
 bsc = /home/tomis/Documents/Git/re-pace/node_modules/bs-platform/lib/bsc.exe
 bsdep = /home/tomis/Documents/Git/re-pace/node_modules/bs-platform/lib/bsb_helper.exe
 warnings = -w -30-40+6+7+27+32..39+44+45+101
@@ -7,13 +7,12 @@ bsc_flags = -bs-suffix -nostdlib -I '/home/tomis/Documents/Git/re-pace/node_modu
 ppx_flags = -ppx '/home/tomis/Documents/Git/re-pace/node_modules/graphql_ppx/ppx'
 bs_package_includes = -I /home/tomis/Documents/Git/re-pace/node_modules/reason-react/lib/ocaml -I /home/tomis/Documents/Git/re-pace/node_modules/bs-css/lib/ocaml -I /home/tomis/Documents/Git/re-pace/node_modules/@pace/ui/lib/ocaml
 bs_package_dev_includes = 
-namespace = 
+namespace = -ns PaceCore
 bsb_dir_group = 0
-bsc_group_1_includes = 
 refmt = /home/tomis/Documents/Git/re-pace/node_modules/bs-platform/lib/refmt.exe
 reason_react_jsx = -ppx '/home/tomis/Documents/Git/re-pace/node_modules/bs-platform/lib/reactjs_jsx_ppx_2.exe'
 refmt_flags = --print binary
-bsc_lib_includes = -I src
+bsc_lib_includes = -I . -I src
 rule build_ast_and_module_sets_from_re
   command = ${bsc} -pp "${refmt} ${refmt_flags}" ${reason_react_jsx}  ${ppx_flags} ${warnings} ${bsc_flags} -c -o ${out} -bs-syntax-only -bs-binary-ast -impl ${in}
   description = [34mBuilding[39m [2m${out}[22m
@@ -27,8 +26,13 @@ rule build_cmj_cmi
   command = ${bsc} ${bs_package_flags} -bs-assume-no-mli -bs-no-builtin-ppx-ml -bs-no-implicit-include ${bs_package_includes} ${bsc_lib_includes} ${bsc_extra_includes} ${warnings} ${bsc_flags} -o ${out} -c  ${in} $postbuild
   depfile = ${in}.d
   description = [34mBuilding[39m [2m${out}[22m
-build src/App.cmj |  $src_root_dir/src/App.bs.js src/App.cmi : build_cmj_cmi src/App.mlast
+build src/App-PaceCore.cmj |  $src_root_dir/src/App.bs.js src/App-PaceCore.cmi : build_cmj_cmi src/App.mlast
   bsc_flags = $bsc_flags -bs-re-out -bs-super-errors
   bs_package_flags = $bs_package_flags  -bs-package-output es6:src
   restat = 1 
-build build.ninja : phony  ||  src/App.mlast.d
+rule build_package
+  command = ${bsc} -w -49 -no-alias-deps -c ${in}
+  description = [34mBuilding[39m [2m${out}[22m
+build PaceCore.cmi : build_package PaceCore.mlmap
+  restat = 1 
+build build.ninja : phony  ||  PaceCore.cmi src/App.mlast.d

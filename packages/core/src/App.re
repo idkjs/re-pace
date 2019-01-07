@@ -15,6 +15,8 @@ type action =
    Needs to be **after** state and action declarations! */
 let component = ReasonReact.reducerComponent("App");
 
+open PaceUi;
+
 /* greeting and children are props. `children` isn't used, therefore ignored.
    We ignore it by prepending it with an underscore */
 let make = _children => {

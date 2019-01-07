@@ -16,10 +16,10 @@ import * as Curry from 'bs-platform/lib/es6/curry.js';
 import * as ReasonReact from 'reason-react/src/ReasonReact.js';
 
 // flowlint-next-line nonstrict-import:off
-import type {Mouse_t as ReactEvent_Mouse_t} from './ReactEvent.shim';
+import type {Icons_iconType as PaceUi_Icons_iconType} from './PaceUi.gen';
 
 // flowlint-next-line nonstrict-import:off
-import type {iconType as Icons_iconType} from './Icons.gen';
+import type {Mouse_t as ReactEvent_Mouse_t} from './ReactEvent.shim';
 
 // flowlint-next-line nonstrict-import:off
 import type {reactElement as ReasonReact_reactElement} from './ReactShim.shim';
@@ -30,7 +30,7 @@ export type Props = {|
   +onClick?: (ReactEvent_Mouse_t) => void, 
   +disabled?: boolean, 
   +caret?: boolean, 
-  +icon?: Icons_iconType, 
+  +icon?: PaceUi_Icons_iconType, 
   +bsStyle?: bsStyle, 
   +children?: Array<ReasonReact_reactElement>
 |};

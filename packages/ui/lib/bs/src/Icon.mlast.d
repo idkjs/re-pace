@@ -1,1 +1,1 @@
-src/Icon.cmj : src/config/Icons.cmj
+src/Icon-PaceUi.cmj : src/config/Icons-PaceUi.cmj

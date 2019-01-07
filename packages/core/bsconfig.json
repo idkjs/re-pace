@@ -13,6 +13,7 @@
       "in-source": true
     }
   ],
+  "namespace": true,
   "suffix": ".bs.js",
   "bsc-flags": [
     "-bs-super-errors"

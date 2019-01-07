@@ -1,1 +1,1 @@
-src/Button.cmj : src/Icon.cmj
+src/Button-PaceUi.cmj : src/Icon-PaceUi.cmj
