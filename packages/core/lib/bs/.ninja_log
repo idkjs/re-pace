@@ -1,0 +1,13 @@
+# ninja log v5
+0	10	1546898764	src/App.mlast	4d2607e9cba9a3f2
+10	11	1546898764	src/App.mlast.d	1fe8e54c8708e635
+0	12	1546898986	src/App.mlast	fcd806ee6efcc10f
+12	13	1546898986	src/App.mlast.d	1fe8e54c8708e635
+0	11	1546898986	src/App.cmj	7f06bd1d02e0f1a5
+0	11	1546898986	/home/tomis/Documents/Git/re-pace/packages/core/src/App.bs.js	7f06bd1d02e0f1a5
+0	11	1546898986	src/App.cmi	7f06bd1d02e0f1a5
+0	9	1546899000	src/App.mlast	4d2607e9cba9a3f2
+9	10	1546899000	src/App.mlast.d	1fe8e54c8708e635
+0	10	1546899000	src/App.cmj	7f06bd1d02e0f1a5
+0	10	1546899000	/home/tomis/Documents/Git/re-pace/node_modules/@pace/core/src/App.bs.js	7f06bd1d02e0f1a5
+0	10	1546899000	src/App.cmi	7f06bd1d02e0f1a5

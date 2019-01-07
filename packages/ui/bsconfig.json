@@ -1,10 +1,10 @@
 {
-  "name": "pace-platform",
+  "name": "@pace/ui",
   "reason": {
     "react-jsx": 2
   },
   "sources": {
-    "dir": "client",
+    "dir": "src",
     "subdirs": true
   },
   "package-specs": [
@@ -19,8 +19,6 @@
   ],
   "bs-dependencies": [
     "reason-react",
-    "@pace/ui",
-    "@pace/core",
     "bs-css"
   ],
   "ppx-flags": [

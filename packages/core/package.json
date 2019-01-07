@@ -1,0 +1,16 @@
+{
+  "name": "@pace/core",
+  "version": "0.1.0",
+  "dependencies": {
+    "bs-css": "^8.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reason-react": ">=0.4.0",
+    "@pace/ui": "*"
+  },
+  "scripts": {
+    "build": "export BS_CMT_POST_PROCESS_CMD=\"gentype\" && bsb -make-world",
+    "start": "export BS_CMT_POST_PROCESS_CMD=\"gentype\" && bsb -make-world -w",
+    "clean": "bsb -clean-world"
+  }
+}

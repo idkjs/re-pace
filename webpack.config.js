@@ -7,7 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/Index.bs.js'),
+  entry: path.resolve(__dirname, 'client/Index.bs.js'),
   // context: path.resolve(__dirname),
   mode: isProd ? 'production' : 'development',
   resolve: {
@@ -51,7 +51,7 @@ module.exports = {
     new CleanWebpackPlugin([outputDir]),
     new HtmlWebpackPlugin({
       title: 'Hot Module Replacement',
-      template: 'src/index.html',
+      template: 'client/index.html',
     }),
     new webpack.HotModuleReplacementPlugin()
   ]

@@ -1,10 +1,10 @@
 {
-  "name": "pace-platform",
+  "name": "@pace/core",
   "reason": {
     "react-jsx": 2
   },
   "sources": {
-    "dir": "client",
+    "dir": "src",
     "subdirs": true
   },
   "package-specs": [
@@ -19,9 +19,8 @@
   ],
   "bs-dependencies": [
     "reason-react",
-    "@pace/ui",
-    "@pace/core",
-    "bs-css"
+    "bs-css",
+    "@pace/ui"
   ],
   "ppx-flags": [
     "graphql_ppx/ppx"

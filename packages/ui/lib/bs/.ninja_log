@@ -1,0 +1,16 @@
+# ninja log v5
+0	9	1546898764	src/Icon.mlast	517f106a46325502
+0	10	1546898764	src/config/Icons.mlast	ad9f24db0aa9f3a7
+0	10	1546898764	src/Button.mlast	49d80ab1f1520d7e
+9	10	1546898764	src/Icon.mlast.d	b5569a10567ada52
+10	10	1546898764	src/config/Icons.mlast.d	b92cba458ce61f9e
+10	11	1546898764	src/Button.mlast.d	5075f3193023b451
+0	5	1546898764	src/config/Icons.cmj	a4b8c820597d2bbb
+0	5	1546898764	/home/tomis/Documents/Git/re-pace/node_modules/@pace/ui/src/config/Icons.bs.js	a4b8c820597d2bbb
+0	5	1546898764	src/config/Icons.cmi	a4b8c820597d2bbb
+5	22	1546898764	src/Icon.cmj	5339cf541cf07c1
+5	22	1546898764	/home/tomis/Documents/Git/re-pace/node_modules/@pace/ui/src/Icon.bs.js	5339cf541cf07c1
+5	22	1546898764	src/Icon.cmi	5339cf541cf07c1
+23	42	1546898764	src/Button.cmj	af20b82a0798f009
+23	42	1546898764	/home/tomis/Documents/Git/re-pace/node_modules/@pace/ui/src/Button.bs.js	af20b82a0798f009
+23	42	1546898764	src/Button.cmi	af20b82a0798f009

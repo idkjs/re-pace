@@ -1,0 +1,1 @@
+src/Icon.cmj : src/config/Icons.cmj
