@@ -49,7 +49,7 @@ function button(disabled, bsStyle) {
                         /* :: */[
                           Css.borderBottomColor(Css.red),
                           /* :: */[
-                            Css.backgroundColor(getBackgroundColor(bsStyle)),
+                            Css.backgroundColor(disabled ? Css.gray : getBackgroundColor(bsStyle)),
                             /* :: */[
                               Css.textAlign(Css.center),
                               /* :: */[

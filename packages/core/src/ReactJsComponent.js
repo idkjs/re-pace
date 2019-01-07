@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import Button from './Button.gen';
+import Button from '@pace/ui/src/Button.gen';
 
 type Props = {
   hide?: boolean,
@@ -13,7 +13,7 @@ class ReactJsComponent extends React.PureComponent<Props> {
     }
     return (
       <React.Fragment>
-        <Button bsStyle='danger' icon='danger'>Danger Button from JS Component</Button>
+        <Button bsStyle='danger' icon="danger">Danger Button from JS Component</Button>
       </React.Fragment>
     );
   }

@@ -38,15 +38,16 @@ let make = _children => {
         {ReasonReact.string("Warning Button")}
       </Button>
       <Button
-        icon=`success
-        onClick={_event => self.send(Toggle)}
-        disabled=true
-        bsStyle=`success>
+        icon=`success onClick={_event => self.send(Toggle)} bsStyle=`success>
         {ReasonReact.string("Success Button")}
       </Button>
       <Button bsStyle=`danger icon=`danger>
         {ReasonReact.string("Danger Button")}
       </Button>
+      <Button bsStyle=`danger disabled=true>
+        {ReasonReact.string("Disabled Button")}
+      </Button>
+      <ReactJsComponent hide=false />
     </div>;
   },
 };

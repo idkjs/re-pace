@@ -5,6 +5,7 @@ import * as Curry from "bs-platform/lib/es6/curry.js";
 import * as React from "react";
 import * as ReasonReact from "reason-react/src/ReasonReact.js";
 import * as Button$PaceUi from "@pace/ui/src/Button.bs.js";
+import * as ReactJsComponentGen from "./ReactJsComponent.gen";
 
 var component = ReasonReact.reducerComponent("App");
 
@@ -24,7 +25,7 @@ function make(_children) {
                                     return Curry._1(self[/* send */3], /* Toggle */1);
                                   }), undefined, undefined, /* warning */164354652, /* warning */164354652, /* array */["Warning Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make((function (_event) {
                                     return Curry._1(self[/* send */3], /* Toggle */1);
-                                  }), true, undefined, /* success */944645571, /* success */944645571, /* array */["Success Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make(undefined, undefined, undefined, /* danger */512905955, /* danger */512905955, /* array */["Danger Button"])));
+                                  }), undefined, undefined, /* success */944645571, /* success */944645571, /* array */["Success Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make(undefined, undefined, undefined, /* danger */512905955, /* danger */512905955, /* array */["Danger Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make(undefined, true, undefined, undefined, /* danger */512905955, /* array */["Disabled Button"])), ReasonReact.element(undefined, undefined, ReactJsComponentGen.make(false, /* array */[])));
             }),
           /* initialState */(function (param) {
               return /* record */[

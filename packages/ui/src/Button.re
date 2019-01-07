@@ -38,7 +38,7 @@ module Styles = {
       marginBottom(zero),
       borderColor(green),
       borderBottomColor(red),
-      backgroundColor(getBackgroundColor(bsStyle)),
+      backgroundColor(disabled ? gray : getBackgroundColor(bsStyle)),
       textAlign(center),
       verticalAlign(middle),
       cursor(disabled ? `notAllowed : `pointer),

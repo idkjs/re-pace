@@ -11,7 +11,7 @@ module.exports = {
   // context: path.resolve(__dirname),
   mode: isProd ? 'production' : 'development',
   resolve: {
-    modules: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules')]
+    modules: [path.resolve(__dirname, 'client'), path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules')],
   },
   output: {
     // path: outputDir,
