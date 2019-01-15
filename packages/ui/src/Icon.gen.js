@@ -3,6 +3,7 @@
  * @generated
  * @nolint
  */
+/* eslint-disable */
 
 const $$toRE430912857 = {"normal": 812216871, "small": -9768761, "xs": 26875};
 
@@ -30,7 +31,7 @@ export type Props = {|
 export const component: React$ComponentType<Props> = ReasonReact.wrapReasonForJs(
   IconBS.component,
   (function _(jsProps: Props) {
-     return Curry._4(IconBS.make, jsProps.iconType, jsProps.disabled, $$toRE430912857[jsProps.bsSize], jsProps.children);
+     return Curry._4(IconBS.make, jsProps.iconType, jsProps.disabled, (jsProps.bsSize == null ? undefined : $$toRE430912857[jsProps.bsSize]), jsProps.children);
   }));
 
 export default component;
