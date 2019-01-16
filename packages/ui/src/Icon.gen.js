@@ -17,12 +17,12 @@ import * as IconBS from './Icon.bs';
 import * as ReasonReact from 'reason-react/src/ReasonReact.js';
 
 // flowlint-next-line nonstrict-import:off
-import type {Icons_iconType as PaceUi_Icons_iconType} from './PaceUi.gen';
+import type {iconType as Icons_iconType} from './Icons.gen';
 
 export type bsSize = "normal" | "small" | "xs";
 
 export type Props = {|
-  +iconType: PaceUi_Icons_iconType, 
+  +iconType: Icons_iconType, 
   +disabled?: boolean, 
   +bsSize?: bsSize, 
   +children?: mixed
