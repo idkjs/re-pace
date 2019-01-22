@@ -25,7 +25,7 @@ function make(_children) {
                                     return Curry._1(self[/* send */3], /* Toggle */1);
                                   }), undefined, undefined, /* warning */164354652, /* warning */164354652, /* array */["Warning Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make((function (_event) {
                                     return Curry._1(self[/* send */3], /* Toggle */1);
-                                  }), undefined, undefined, /* success */944645571, /* success */944645571, /* array */["Success Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make(undefined, undefined, undefined, /* danger */512905955, /* danger */512905955, /* array */["Danger Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make(undefined, true, undefined, undefined, /* danger */512905955, /* array */["Disabled Button"])), ReasonReact.element(undefined, undefined, ReactJsComponentGen.make(false, /* array */[])));
+                                  }), undefined, undefined, /* success */944645571, /* success */944645571, /* array */["Success Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make(undefined, undefined, undefined, /* danger */512905955, /* danger */512905955, /* array */["Danger Button"])), ReasonReact.element(undefined, undefined, Button$PaceUi.make(undefined, true, undefined, undefined, /* danger */512905955, /* array */["Disabled Button s"])), ReasonReact.element(undefined, undefined, ReactJsComponentGen.make(false, /* array */[])));
             }),
           /* initialState */(function (param) {
               return /* record */[

@@ -23,9 +23,6 @@
     "bs-css",
     "@pace/ui"
   ],
-  "ppx-flags": [
-    "graphql_ppx/ppx"
-  ],
   "refmt": 3,
   "gentypeconfig": {
     "language": "flow",

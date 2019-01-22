@@ -1,6 +1,7 @@
 {
   "name": "@pace/core",
   "version": "0.1.0",
+  "license": "MIT",
   "dependencies": {
     "bs-css": "^8.0.0",
     "react": "^16.2.0",
