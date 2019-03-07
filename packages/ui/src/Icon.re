@@ -6,7 +6,7 @@ module Styles = {
   open Css;
   let svg = (~disabled, ~bsSize) =>
     style([
-      width(px(40)),
+      width(px(20)),
       height(px(20)),
       position(relative),
       display(inlineBlock),
