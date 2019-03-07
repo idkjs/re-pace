@@ -7,13 +7,15 @@
 
 const $$toRE174527891 = {"help": -989121855, "success": 944645571, "info": -977586066, "warning": 164354652, "danger": 512905955};
 
+const $$toRE430912857 = {"normal": 812216871, "small": -9768761, "xs": 26875};
+
 const $$toRE153033107 = {"default": 465819841, "primary": 58474434, "success": 944645571, "warning": 164354652, "danger": 512905955, "inverse": 1039223728, "minimal": -873810847, "link": -944564230};
 
 // $FlowExpectedError: Reason checked type sufficiently
-import * as ButtonBS from './Button.bs';
+import * as Curry from 'bs-platform/lib/es6/curry.js';
 
 // $FlowExpectedError: Reason checked type sufficiently
-import * as Curry from 'bs-platform/lib/es6/curry.js';
+import * as ButtonBS from './Button.bs';
 
 // $FlowExpectedError: Reason checked type sufficiently
 import * as ReasonReact from 'reason-react/src/ReasonReact.js';
@@ -37,19 +39,22 @@ export type bsStyle =
   | "minimal"
   | "link";
 
+export type bsSize = "normal" | "small" | "xs";
+
 export type Props = {|
   +onClick?: (ReactEvent_Mouse_t) => void, 
   +disabled?: boolean, 
   +caret?: boolean, 
   +icon?: Icons_iconType, 
   +bsStyle?: bsStyle, 
+  +bsSize?: bsSize, 
   +children?: Array<ReasonReact_reactElement>
 |};
 
 export const component: React$ComponentType<Props> = ReasonReact.wrapReasonForJs(
   ButtonBS.component,
   (function _(jsProps: Props) {
-     return Curry._6(ButtonBS.make, jsProps.onClick, jsProps.disabled, jsProps.caret, (jsProps.icon == null ? undefined : $$toRE174527891[jsProps.icon]), (jsProps.bsStyle == null ? undefined : $$toRE153033107[jsProps.bsStyle]), jsProps.children);
+     return Curry._7(ButtonBS.make, jsProps.onClick, jsProps.disabled, jsProps.caret, (jsProps.icon == null ? undefined : $$toRE174527891[jsProps.icon]), (jsProps.bsStyle == null ? undefined : $$toRE153033107[jsProps.bsStyle]), (jsProps.bsSize == null ? undefined : $$toRE430912857[jsProps.bsSize]), jsProps.children);
   }));
 
 export default component;

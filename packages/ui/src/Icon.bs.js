@@ -9,7 +9,7 @@ var component = ReasonReact.statelessComponent("Icon");
 
 function svg(disabled, bsSize) {
   return Css.style(/* :: */[
-              Css.width(Css.px(20)),
+              Css.width(Css.px(40)),
               /* :: */[
                 Css.height(Css.px(20)),
                 /* :: */[

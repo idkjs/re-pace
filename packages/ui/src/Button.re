@@ -56,6 +56,7 @@ let make =
       ~caret=false,
       ~icon=?,
       ~bsStyle: bsStyle=`default,
+      ~bsSize: bsSize=`normal,
       _children,
     ) => {
   let onButtonClick = (event, self) => {

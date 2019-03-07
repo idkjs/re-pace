@@ -84,7 +84,7 @@ var Styles = /* module */[
   /* button */button
 ];
 
-function make(onClick, $staropt$star, $staropt$star$1, icon, $staropt$star$2, _children) {
+function make(onClick, $staropt$star, $staropt$star$1, icon, $staropt$star$2, $staropt$star$3, _children) {
   var disabled = $staropt$star !== undefined ? $staropt$star : false;
   var caret = $staropt$star$1 !== undefined ? $staropt$star$1 : false;
   var bsStyle = $staropt$star$2 !== undefined ? $staropt$star$2 : /* default */465819841;

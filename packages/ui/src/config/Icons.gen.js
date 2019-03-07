@@ -4,6 +4,8 @@
  * @nolint
  */
 /* eslint-disable */
+// $FlowExpectedError: Reason checked type sufficiently
+type $any = any;
 
 const $$toRE174527891 = {"help": -989121855, "success": 944645571, "info": -977586066, "warning": 164354652, "danger": 512905955};
 
@@ -17,7 +19,7 @@ export type iconType =
   | "warning"
   | "danger";
 
-export const getIconPath: (iconType) => string = function _(Arg1) {
+export const getIconPath: (iconType) => string = function _(Arg1: $any) {
   const result = IconsBS.getIconPath($$toRE174527891[Arg1]);
   return result
 };
