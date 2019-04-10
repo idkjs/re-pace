@@ -24,4 +24,4 @@ export function ReactJsComponentTypeChecked(props: Props) {
 }
 
 // Export 'make' early to allow circular import from the '.bs.js' file.
-export const make: mixed = function _(hide: $any, children: $any) { return ReasonReact.wrapJsForReason(ReactJsComponent, {hide: hide}, children); };
+export const make: mixed = function (hide: $any, children: $any) { return ReasonReact.wrapJsForReason(ReactJsComponent, {hide: hide}, children); };

@@ -19,7 +19,7 @@ export type iconType =
   | "warning"
   | "danger";
 
-export const getIconPath: (iconType) => string = function _(Arg1: $any) {
+export const getIconPath: (iconType) => string = function (Arg1: $any) {
   const result = IconsBS.getIconPath($$toRE174527891[Arg1]);
   return result
 };
