@@ -6,11 +6,11 @@
   ],
   "version": "0.1.0",
   "scripts": {
-    "clean": "lerna exec --stream -- bsb -clean-world",
-    "build:prod": "lerna exec --concurrency 1 --stream -- \"export BS_CMT_POST_PROCESS_CMD='gentype' && bsb -make-world\"",
-    "build:lerna": "lerna exec --concurrency 1 --stream -- \"export BS_CMT_POST_PROCESS_CMD='gentype' && bsb -make-world -w\"",
+    "clean": "lerna exec --stream -- ../../node_modules/bs-platform/lib/bsb -clean-world",
+    "build:prod": "lerna exec --concurrency 1 --stream -- \"../../node_modules/bs-platform/lib/bsb -make-world\"",
+    "build:lerna": "lerna exec --concurrency 1 --stream -- \"../../node_modules/bs-platform/lib/bsb -make-world -w\"",
     "build:yarn": "yarn workspaces run start",
-    "build:oao": "oao all \"yarn run build\"",
+    "build:oao": "oao all \"../../node_modules/bs-platform/lib/bsb -make-world -w\"",
     "workaround": "sed -i -e 's/\\[\"ignore\",/\\[\"inherit\",/g' ./node_modules/@lerna/child-process/index.js",
     "dev": "yarn clean && yarn workaround && yarn build:lerna",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,9 +25,9 @@
   "license": "MIT",
   "dependencies": {
     "bs-css": "^8.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "reason-react": ">=0.4.0"
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "reason-react": ">=0.7.0"
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
@@ -35,7 +35,7 @@
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",
     "babel-loader": "8.0.0",
-    "bs-platform": "5.0.1",
+    "bs-platform": "^5.0.3",
     "clean-webpack-plugin": "^1.0.0",
     "gentype": "2.19.0",
     "html-webpack-plugin": "^3.2.0",

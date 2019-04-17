@@ -9,8 +9,8 @@
     "reason-react": ">=0.4.0"
   },
   "scripts": {
-    "build": "export BS_CMT_POST_PROCESS_CMD=\"gentype\" && bsb -make-world",
-    "start": "export BS_CMT_POST_PROCESS_CMD=\"gentype\" && bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "build": "../../node_modules/bs-platform/lib/bsb -make-world",
+    "start": "../../node_modules/bs-platform/lib/bsb -make-world -w",
+    "clean": "../../node_modules/bs-platform/lib/bsb -clean-world"
   }
 }
