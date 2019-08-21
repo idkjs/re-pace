@@ -9,3 +9,6 @@ npm-debug.log
 yarn-error.log
 **/lib/bs/
 **/lib/ocaml/
+*.bs.js
+*.gen.js
+**/node_modules
