@@ -14,16 +14,10 @@
     }
   ],
   "suffix": ".bs.js",
-  "bsc-flags": [
-    "-bs-super-errors"
-  ],
-  "bs-dependencies": [
-    "reason-react",
-    "@pace/ui",
-    "@pace/core",
-    "bs-css"
-  ],
-  "refmt": 3,
+  "bsc-flags": [ "-bs-super-errors" ],
+  "pinned-dependencies": [ "@pace/ui", "@pace/core" ],
+  "bs-dependencies": [ "reason-react", "@pace/ui", "@pace/core", "bs-css", "bs-css-emotion" ],
+
   "gentypeconfig": {
     "language": "flow",
     "module": "es6",

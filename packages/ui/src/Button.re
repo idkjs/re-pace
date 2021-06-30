@@ -11,8 +11,6 @@ type bsStyle = [
 
 type bsSize = [ | `normal | `small | `xs];
 
-let component = ReasonReact.statelessComponent("Button");
-
 module Styles = {
   /* Open the Css module, so we can access the style properties below without prefixing them with Css. */
   open Css;
@@ -33,12 +31,14 @@ module Styles = {
     style([
       position(relative),
       display(inlineBlock),
-      boxShadow(~y=px(1), ~inset=true, rgba(255, 255, 255, 0.1)),
+      boxShadow(
+        Shadow.box(~inset=true, ~y=px(1), rgba(255, 255, 255, `num(0.1))),
+      ),
       borderWidth(px(1)),
       marginBottom(zero),
       borderColor(green),
       borderBottomColor(red),
-      backgroundColor(disabled ? gray : getBackgroundColor(bsStyle)),
+      backgroundColor(disabled ? gray : getBackgroundColor(~bsStyle)),
       textAlign(center),
       verticalAlign(middle),
       cursor(disabled ? `notAllowed : `pointer),
@@ -49,38 +49,34 @@ module Styles = {
 };
 
 [@genType]
+[@react.component]
 let make =
     (
       ~onClick=?,
       ~disabled=false,
       ~caret=false,
+      ~hide=?,
       ~icon=?,
       ~bsStyle: bsStyle=`default,
       ~bsSize: bsSize=`normal,
-      _children,
+      ~children,
     ) => {
-  let onButtonClick = (event, self) => {
+  let onButtonClick = event => {
     switch (onClick) {
     | None => ()
     | Some(onClick) => onClick(event)
     };
-    Js.log(self);
+    Js.log(event);
   };
   let iconEl = _ =>
     switch (icon) {
-    | None => ReasonReact.null
+    | None => React.null
     | Some(icon) => <Icon iconType=icon />
     };
-  {
-    ...component,
-
-    render: self =>
-      <button
-        onClick={self.handle(onButtonClick)}
-        className={Styles.button(~disabled, ~bsStyle)}>
-        {iconEl(self)}
-        <span> ..._children </span>
-        {caret ? <span className="caret" /> : ReasonReact.null}
-      </button>,
-  };
+  <button
+    onClick=onButtonClick className={Styles.button(~disabled, ~bsStyle)}>
+    {iconEl()}
+    <span> children </span>
+    {caret ? <span className="caret" /> : React.null}
+  </button>;
 };

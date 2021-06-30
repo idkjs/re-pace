@@ -2,7 +2,7 @@ const path = require('path');
 const outputDir = path.join(__dirname, "build/");
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -48,7 +48,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([outputDir]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Hot Module Replacement',
       template: 'client/index.html',

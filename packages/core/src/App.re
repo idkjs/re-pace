@@ -9,37 +9,36 @@ type action =
   | InputChange(string)
   | Toggle;
 
-let component = ReasonReact.reducerComponent("App");
-
 open PaceUi;
+[@react.component]
+let make = () => {
+  let (state, dispatch) =
+    React.useReducer(
+      (state, action) =>
+        switch (action) {
+        | ButtonClick => {...state, count: state.count + 1}
+        | InputChange(greeting) => {...state, greeting}
+        | Toggle => {...state, show: !state.show}
+        },
+      {count: 4, show: true, greeting: ""},
+    );
 
-let make = _children => {
-  ...component,
-  initialState: () => {count: 4, show: true, greeting: ""},
-  reducer: (action, state) =>
-    switch (action) {
-    | ButtonClick => ReasonReact.Update({...state, count: state.count + 1})
-    | InputChange(greeting) => ReasonReact.Update({...state, greeting})
-    | Toggle => ReasonReact.Update({...state, show: !state.show})
-    },
-  render: self => {
-    <div>
-      <Button icon=`help> {ReasonReact.string("Help Button")} </Button>
-      <Button
-        onClick={_event => self.send(Toggle)} bsStyle=`warning icon=`warning>
-        {ReasonReact.string("Warning Button")}
-      </Button>
-      <Button
-        icon=`success onClick={_event => self.send(Toggle)} bsStyle=`success>
-        {ReasonReact.string("Success Button")}
-      </Button>
-      <Button bsStyle=`danger icon=`danger>
-        {ReasonReact.string("Danger Button")}
-      </Button>
-      <Button bsStyle=`danger disabled=true>
-        {ReasonReact.string("Disabled Button s")}
-      </Button>
-      <ReactJsComponent hide=false />
-    </div>;
-  },
+  <div>
+    <Button icon=`help> {React.string("Help Button")} </Button>
+    <Button
+      onClick={_event => dispatch(Toggle)} bsStyle=`warning icon=`warning>
+      {React.string("Warning Button")}
+    </Button>
+    <Button
+      icon=`success onClick={_event => dispatch(Toggle)} bsStyle=`success>
+      {React.string("Success Button")}
+    </Button>
+    <Button bsStyle=`danger icon=`danger>
+      {React.string("Danger Button")}
+    </Button>
+    <Button bsStyle=`danger disabled=true>
+      {React.string("Disabled Button s")}
+    </Button>
+    // <Button hide=false />
+  </div>;
 };

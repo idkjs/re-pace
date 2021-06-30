@@ -1,7 +1,7 @@
 {
   "name": "@pace/ui",
   "reason": {
-    "react-jsx": 2
+    "react-jsx": 3
   },
   "sources": {
     "dir": "src",
@@ -20,9 +20,10 @@
   ],
   "bs-dependencies": [
     "reason-react",
+    "bs-css-emotion",
     "bs-css"
   ],
-  "refmt": 3,
+
   "gentypeconfig": {
     "language": "flow",
     "module": "es6",

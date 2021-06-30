@@ -1,46 +1,44 @@
 {
   "name": "pace-platform",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": [ "packages/*" ],
   "version": "0.1.0",
   "scripts": {
-    "clean": "lerna exec --stream -- ../../node_modules/bs-platform/lib/bsb -clean-world",
-    "build:prod": "lerna exec --concurrency 1 --stream -- \"../../node_modules/bs-platform/lib/bsb -make-world\"",
-    "build:lerna": "lerna exec --concurrency 1 --stream -- \"../../node_modules/bs-platform/lib/bsb -make-world -w\"",
-    "build:yarn": "yarn workspaces run start",
-    "workaround": "sed -i -e 's/\\[\"ignore\",/\\[\"inherit\",/g' ./node_modules/@lerna/child-process/index.js",
-    "dev": "yarn clean && yarn workaround && yarn build:lerna",
+    "clean": "bsb -clean-world",
+    "build-packages": "bsb -make-world",
+    "watch-packages": "watchexec -w packages -i lib -e re,rei yarn build-packages",
+    "build-bundles": "yarn workspace @pace/ui build && yarn workspace @pace/core build",
+    "watch-bundles": "yarn workspace @pace/ui @pace/core watch-bundles",
+    "build": "yarn build-packages && yarn build-bundles",
+    "dev": "yarn clean && yarn build && yarn webpack:watch && yarn webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack-dev-server",
-    "webpack:watch": "webpack -w",
+    "webpack": "webpack serve",
+    "webpack:watch": "webpack watch",
     "webpack:production": "NODE_ENV=production webpack"
   },
-  "keywords": [
-    "BuckleScript"
-  ],
+  "keywords": [ "BuckleScript" ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bs-css": "^9.0.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "reason-react": ">=0.7.0"
+    "bs-css-emotion": "^3.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reason-react": ">=0.9.1"
   },
   "devDependencies": {
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
-    "@babel/preset-flow": "7.0.0",
-    "@babel/preset-react": "7.0.0",
-    "babel-loader": "8.0.6",
-    "bs-platform": "^5.1.0",
-    "clean-webpack-plugin": "^1.0.0",
-    "gentype": "2.35.0",
-    "html-webpack-plugin": "^3.2.0",
-    "lerna": "^3.16.4",
-    "webpack": "4.19.1",
-    "webpack-cli": "2.1.4",
-    "webpack-dev-server": "^3.1.14"
+    "@babel/core": "7.14.6",
+    "@babel/preset-env": "7.14.7",
+    "@babel/preset-flow": "7.14.5",
+    "@babel/preset-react": "7.14.5",
+    "babel-loader": "8.2.2",
+    "bs-platform": "^9.0.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "flow-bin": "^0.154.0",
+    "gentype": "4.1.0",
+    "html-webpack-plugin": "^5.3.2",
+    "lerna": "^4.0.0",
+    "webpack": "5.41.1",
+    "webpack-cli": "4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
